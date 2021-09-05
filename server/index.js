@@ -4,6 +4,7 @@ import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import postRoutes from "./routes/posts.js";
+import userRoutes from "./routes/users.js";
 
 const app = express();
 dotenv.config();
@@ -16,9 +17,10 @@ app.use(cors());
 
 //routes
 app.use("/posts", postRoutes);
-app.get("/", (req, res) => {
-  res.send("Hello Memories API");
-});
+app.use("/user", userRoutes);
+// app.get("/", (req, res) => {
+//   res.send("Hello Memories API");
+// });
 //setup DB
 // const CONNECTION_URL =
 //   "mongodb+srv://aakash404:Barcelona@123@cluster0.u5wyo.mongodb.net/memories_db?retryWrites=true&w=majority";
