@@ -24,6 +24,8 @@ const Post = ({ post, setCurrentId }) => {
 
   const user = JSON.parse(localStorage.getItem("profile"));
 
+  console.log("userId=", user);
+
   const Likes = () => {
     if (post.likes.length > 0) {
       return post.likes.find(
@@ -67,7 +69,7 @@ const Post = ({ post, setCurrentId }) => {
           </Typography>
         </div>
         {user?.result?.googleId === post?.creator ||
-          (user?.result?._id == post?.creator && (
+          (user?.result?._id === post?.creator && (
             <div className={classes.overlay2}>
               <Button
                 style={{ color: "white" }}
@@ -100,7 +102,7 @@ const Post = ({ post, setCurrentId }) => {
           >
             <Likes />
           </Button>
-          {user?.result?.googleId === post?.creator ||
+          {user?.result?.googleId == post?.creator ||
             (user?.result?._id == post?.creator && (
               <Button
                 size="small"

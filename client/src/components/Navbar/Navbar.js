@@ -1,15 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
 import useStyles from "./styles.js";
-import {
-  Container,
-  AppBar,
-  Grow,
-  Grid,
-  Typography,
-  Toolbar,
-  Avatar,
-  Button,
-} from "@material-ui/core";
+import { AppBar, Typography, Toolbar, Avatar, Button } from "@material-ui/core";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import memories from "../../assets/memories.png";
 import { useDispatch } from "react-redux";

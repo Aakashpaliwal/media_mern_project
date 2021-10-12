@@ -1,8 +1,5 @@
 import "./App.css";
-import { Container, AppBar, Grow, Grid, Typography } from "@material-ui/core";
-import Form from "./components/Form/Form";
-import { useEffect, useState } from "react";
-import { getPosts } from "./actions/posts";
+import { Container } from "@material-ui/core";
 import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
